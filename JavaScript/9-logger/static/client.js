@@ -1,6 +1,8 @@
 'use strict';
 
-const socket = new WebSocket('ws://127.0.0.1:8001/');
+const config =  require('config');
+
+const socket = new WebSocket(config.WS_URL);
 
 const scaffold = (structure) => {
   const api = {};
